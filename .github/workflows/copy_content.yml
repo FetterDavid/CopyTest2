@@ -30,9 +30,9 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'Folder2/text2.txt' # File to copy
+        source_file: 'Folder3/text2.txt' # File to copy
         destination_repo: 'FetterDavid/CopyTest' # Target repo
-        destination_folder: 'Folder3/' # Folder where to copy it
+        destination_folder: 'Folder2/' # Folder where to copy it
         user_email: 'fetter.david00@gmail.com'
         user_name: 'FetterDavid'
         commit_message: "AUTO: Copying test"
