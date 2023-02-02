@@ -1,7 +1,7 @@
 on:
   push:
 
-name: Copy content test
+name: Copy test
 
 jobs:
   copy-file:
@@ -16,9 +16,9 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'Folder/' # Folder to copy
-        destination_repo: 'FetterDavid/CopyTest' # Target repo
-        destination_folder: '/' # Folder where to copy it
+        source_file: 'Folder/' # Mappa másolása
+        destination_repo: 'FetterDavid/CopyTest' # Cél repo
+        destination_folder: '/' # Mappa ahova másoljuk
         user_email: 'fetter.david00@gmail.com'
         user_name: 'FetterDavid'
         commit_message: "AUTO: Copying test"
@@ -30,9 +30,9 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
-        source_file: 'Folder3/text2.txt' # File to copy
-        destination_repo: 'FetterDavid/CopyTest' # Target repo
-        destination_folder: 'Folder2/' # Folder where to copy it
+        source_file: 'Folder3/text2.txt' # Fájl másolása
+        destination_repo: 'FetterDavid/CopyTest' # Cél repo
+        destination_folder: 'Folder2/' # Mappa ahova másoljuk
         user_email: 'fetter.david00@gmail.com'
         user_name: 'FetterDavid'
         commit_message: "AUTO: Copying test"
