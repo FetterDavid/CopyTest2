@@ -1,7 +1,7 @@
 on:
   push:
 
-name: ⏫ Copy content to REBEL
+name: Copy content test
 
 jobs:
   copy-file:
@@ -19,6 +19,20 @@ jobs:
         source_file: 'Folder/' # Folder to copy
         destination_repo: 'FetterDavid/CopyTest' # Target repo
         destination_folder: '/' # Folder where to copy it
+        user_email: 'fetter.david00@gmail.com'
+        user_name: 'FetterDavid'
+        commit_message: "AUTO: Copying test"
+        git_server: 'github.com'
+        
+    # Copy the file
+    - name: Push file
+      uses: dmnemec/copy_file_to_another_repo_action@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source_file: 'Folder2/text2.txt' # File to copy
+        destination_repo: 'FetterDavid/CopyTest' # Target repo
+        destination_folder: 'Folder2/' # Folder where to copy it
         user_email: 'fetter.david00@gmail.com'
         user_name: 'FetterDavid'
         commit_message: "AUTO: Copying test"
